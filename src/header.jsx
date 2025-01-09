@@ -1,13 +1,13 @@
 import './header.css';
 
-function Header() {
+function Header({onToggleSidebar}) {
   return (
     <div className='header'>
       <div className='left'>Kevu</div>
       <div className='right'>
-        <div>About</div>
-        <div>Experience</div>
-        <div>Hobbies</div>
+        <button onClick={onToggleSidebar}>About</button>
+        <button>Experience</button>
+        <button>Hobbies</button>
       </div>
     </div>
   );
