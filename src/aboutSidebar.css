@@ -1,17 +1,18 @@
 .aboutSidebar {
     position: fixed;
     top: 0;
-    right: -300px;
-    width: 40vw;
+    right: -600px;  /* Start off-screen */
+    width: 600px;
     height: 100%;
-    border-radius: 10%;
+    border-top-left-radius: 40px;
+    border-bottom-left-radius: 40px;
     background-color: white;
-    transition: right 0.3s ease-in-out;
-    box-shadow: -4px 0 10px rgba(0, 0, 0, 0.2);
+    box-shadow: -10px 0 50px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    transition: transform 0.3s ease-in-out;  /* Ensure transition happens */
     z-index: 1000;
   }
   
-  .aboutSidebar.open {
-    right: 0;
+  .aboutSidebar.active {
+    transform: translateX(-600px);  /* Slide in from the right */
   }
-  
